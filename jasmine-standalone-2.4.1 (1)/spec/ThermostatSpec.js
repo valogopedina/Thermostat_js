@@ -1,21 +1,16 @@
+// Unit Tests
+//###########
+
 'use strict';
 
-describe('Thermostat', function(){
-	
-	it('Thermostat is defined', function(){
-		var thermostat = new Thermostat();
-		expect(thermostat).toBeDefined();
-	});
+describe('Thermostat', function() {
+    var thermostat;
 
-	it('calls a method that starts at 20 degrees', function(){
-		var thermostat = new Thermostat();
-		thermostat.temperature();
-		expect(thermostat.temperature).toEqual(20);
-	});
+    beforeEach(function() {
+      thermostat = new Thermostat();
+    });
+
+  it('starts at 20 degrees', function() {
+    expect(thermostat.startTemperature).toEqual(20);
+  });
 });
-
-	// it('Temperature method is set up', function(){
-	// 	var thermostat = new Thermostat();
-	// 	thermostat.temperature();
-	// 	expect(thermostat.temperature).toBeDefined();
-	// });
