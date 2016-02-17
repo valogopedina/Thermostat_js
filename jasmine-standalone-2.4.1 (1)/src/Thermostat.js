@@ -1,19 +1,16 @@
 'use strict';
 
 function Thermostat(){
-	this.startTemperature = 20;
+	this.temperature = 20;
 };
 
-// Thermostat.prototype.startTemperature = function(){		
-// 	// return this.startTemperature;	
+Thermostat.prototype.getCurrentTemperature = function(){
+	return this.temperature;
+};
+
+// Thermostat.prototype.increaseTemperature = function() {
+//   this.temperature += 1;
 // };
 
 
 
-
-// function Airport(){
-//   this._hangar = [];
-// };
-// Airport.prototype.planes = function(){
-//   return this._hangar; 
-// };
