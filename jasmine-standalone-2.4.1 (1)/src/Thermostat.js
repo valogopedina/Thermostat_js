@@ -8,9 +8,10 @@ Thermostat.prototype.getCurrentTemperature = function(){
 	return this.temperature;
 };
 
-// Thermostat.prototype.increaseTemperature = function() {
-//   this.temperature += 1;
-// };
+Thermostat.prototype.increaseTemperature = function() {
+  this.temperature += 1;
+};
 
+// increaseTemperature = up method in solution?
 
 
