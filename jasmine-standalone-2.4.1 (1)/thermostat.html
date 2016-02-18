@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head> 
+		<title>Thermostat</title>
+	</head>
+
+
+	<body>	
+		<script src="jquery.js"></script>
+
+    <script>
+    $(document).ready(function() {
+  var thermostat = new Thermostat();
+  $('#temperature').text(thermostat.temperature);
+
+   $('#increaseTemperature').on('click', function() { 
+  thermostat.increaseTemperature(); 
+  $('#temperature').text(thermostat.temperature); 
+})
+
+  $('#decreaseTemperature').click(function() { 
+  thermostat.decreaseTemperature();
+  $('#temperature').text(thermostat.temperature);
+})
+
+  $('#powerSavingOn').click(function(){ 
+  thermostat.powerSavingOn();
+  $('#temperature').text(thermostat.temperature);
+ })
+
+  $('#powerSavingOff').click(function(){
+  	thermostat.powerSavingOff();
+  $('#temperature').text(thermostat.temperature);
+  })
+
+  $('#reset').click(function(){
+  	thermostat.resetButton();
+  $('#temperature').text(thermostat.temperature);
+  })
+
+})  
+
+
+    </script>
+    
+		
+
+   	<center><h2 id ='temperature'>Temperature</h2>
+   	
+   	<div>
+		<button id= "increaseTemperature"> + </button>
+		<button id= "decreaseTemperature"> - </button>
+		</div> </br> 
+		<div>
+		<button id= "powerSavingOn"> PowerSave On </button>
+		<button id= "powerSavingOff"> PowerSave Off </button>
+		</div> </br> 
+		<button id= "reset"> Reset </button>
+		</center>
+
+		<script src = "src/Thermostat.js"></script>
+
+
+	</body>
+
+</html>
