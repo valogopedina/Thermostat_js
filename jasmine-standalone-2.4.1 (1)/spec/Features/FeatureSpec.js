@@ -71,5 +71,45 @@ it('powers saving mode on ', function(){
     expect(function(){ thermostat.increaseTemperature()}).toThrowError('Already at maximum temperature')
   });
 
+//7. Power saving mode is on by default(Max_TEMPERATURE already by default)
+
+//8. You can reset the temperature to 20 by hitting the reset button
+
+  it('resets the temperature to 20 by reset button ', function(){
+    for(var i = 1; i <= 10; i++) {
+    thermostat.decreaseTemperature();
+    }
+    thermostat.resetButton();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
+
+//9. The thermostat should colour the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
+
+it('colours the display yellow when energy is more than 18 and less than 25', function (){
+    expect(thermostat.displayColor).toEqual('yellow');
+  });
+
+  it('colours the display green when energy is less than 18', function (){
+    for(var i = 1; i <= 3; i++) {
+    thermostat.decreaseTemperature();
+    }
+  expect(thermostat.displayColor).toEqual('green');
+  });
+
+ it('colours the display red when energy is more than 25', function (){
+    thermostat.powerSavingOff();
+    for(var i = 1; i <= 6; i++) {
+    thermostat.increaseTemperature();
+    }
+  expect(thermostat.displayColor).toEqual('red');
+  });
+
+
+
+
+
+
+
 
 });

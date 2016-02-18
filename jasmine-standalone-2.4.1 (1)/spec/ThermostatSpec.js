@@ -46,7 +46,7 @@ describe('Thermostat', function() {
     expect(function(){ thermostat.increaseTemperature()}).toThrowError('Already at maximum temperature')
   });
 
-it('powers saving mode on ', function(){
+  it('powers saving mode on ', function(){
     thermostat.powerSavingOff();
     for(var i = 1; i <= 12; i++) {
     thermostat.increaseTemperature();
@@ -58,4 +58,30 @@ it('powers saving mode on ', function(){
     expect(function(){ thermostat.increaseTemperature()}).toThrowError('Already at maximum temperature')
   });
 
+  it('resets the temperature to 20 by reset button ', function(){
+    for(var i = 1; i <= 10; i++) {
+    thermostat.decreaseTemperature();
+    }
+    thermostat.resetButton();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
+  it('colours the display yellow when energy is more than 18 and less than 25', function (){
+    expect(thermostat.displayColor).toEqual('yellow');
+  });
+
+  it('colours the display green when energy is less than 18', function (){
+    for(var i = 1; i <= 3; i++) {
+    thermostat.decreaseTemperature();
+    }
+  expect(thermostat.displayColor).toEqual('green');
+  });
+
+  it('colours the display red when energy is more than 25', function (){
+    thermostat.powerSavingOff();
+    for(var i = 1; i <= 6; i++) {
+    thermostat.increaseTemperature();
+    }
+  expect(thermostat.displayColor).toEqual('red');
+  });
 });
