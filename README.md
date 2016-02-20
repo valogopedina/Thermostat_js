@@ -6,7 +6,7 @@ Thermostat Challenge - the aim of this project is to generate code to address us
 
 Author
 
-This code was prepared by Valentina Monetta, Elaine Finn @ Makers Academy (Jan 2016 cohort).
+This code was prepared by Valentina Monetta, Elaine Finn and Russel Vaughan @ Makers Academy (Jan 2016 cohort).
 
 Requirements
 
@@ -34,7 +34,7 @@ WIP
 
 Copyright and Licensing
 
-Copyright(c) 2016 Valentina Monetta, Elaine Finn
+Copyright(c) 2016 Valentina Monetta, Elaine Finn, Russell Vaughan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
